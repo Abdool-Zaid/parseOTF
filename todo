@@ -1,0 +1,23 @@
+<1>{
+  __eq = <function 1>,
+  __gc = <function 2>,
+  __index = <table 1>,
+  __tostring = <function 3>,
+  clone = <function 4>,
+  getAdvance = <function 5>,
+  getBearing = <function 6>,
+  getBoundingBox = <function 7>,
+  getDimensions = <function 8>,
+  getFFIPointer = <function 9>,
+  getFormat = <function 10>,
+  getGlyph = <function 11>,
+  getGlyphString = <function 12>,
+  getHeight = <function 13>,
+  getPointer = <function 14>,
+  getSize = <function 15>,
+  getString = <function 16>,
+  getWidth = <function 17>,
+  release = <function 18>,
+  type = <function 19>,
+  typeOf = <function 20>
+}

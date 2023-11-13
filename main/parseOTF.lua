@@ -2,22 +2,17 @@ local res = {}
 
 res.font ='mlem'
 res.test= "working"
+local inspect= require('inspect')
 
 function res.getUnicode(char)
+  Rasterizer = love.font.newRasterizer( res.font )
   local ch= char
-  local rasterizer = love.font.newRasterizer( res.font )
-    local glyphdata = love.font.newGlyphData( rasterizer, ch )
- Gcode =glyphdata:getGlyph()
-
+    local glyphdata = love.font.newGlyphData( Rasterizer, ch )
+  Gcode =glyphdata:getGlyph()
+  local gldt = Rasterizer:getGlyphData( Gcode )
+  print(gldt  )
     return Gcode
 end
 
-function res.writeOTF()
-    
-end
 
-function index_xml()
-  
-  
-end
 return res

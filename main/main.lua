@@ -8,10 +8,9 @@ print(otf.test)
 function love.load()
     love.graphics.setFont(font)
     otf.font= fontPath
-    Char = otf.getUnicode("自")
-    print(string.format("0x%X", Char))
-    print(tonumber("2f00", 16))
+    Char = otf.getUnicode("虚")
     Res =utf8.char(Char)
+    
 end
 
 function love.update()
