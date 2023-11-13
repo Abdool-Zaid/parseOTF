@@ -7,7 +7,10 @@ local font = love.graphics.newFont(fontPath, 180)
 print(otf.test)
 function love.load()
     love.graphics.setFont(font)
-    Char = otf.getUnicode("夢")
+    otf.font= fontPath
+    Char = otf.getUnicode("自")
+    print(string.format("0x%X", Char))
+    print(tonumber("2f00", 16))
     Res =utf8.char(Char)
 end
 
