@@ -2,17 +2,24 @@ local res = {}
 
 res.font ='mlem'
 res.test= "working"
-local inspect= require('inspect')
+
 
 function res.getUnicode(char)
   Rasterizer = love.font.newRasterizer( res.font )
   local ch= char
     local glyphdata = love.font.newGlyphData( Rasterizer, ch )
   Gcode =glyphdata:getGlyph()
-  local gldt = Rasterizer:getGlyphData( Gcode )
-  print(gldt  )
     return Gcode
 end
+ function res.get_gldt(char)
+  local rasterizer = love.font.newRasterizer("assets/NotoSerifJP-Black.otf")
+    local ch = char
 
+    local glyphdata = love.font.newGlyphData(rasterizer, ch)
+    local gcode = glyphdata:getGlyph()
+    local gldt = rasterizer:getGlyphData(gcode)
+    return gldt
+ end
 
+ 
 return res
