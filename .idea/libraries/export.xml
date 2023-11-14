@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="export">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/output/export.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
