@@ -3,7 +3,7 @@ local fontPath = "assets/NotoSerifJP-Black.otf"
 local utf8 = require("utf8")
 local font = love.graphics.newFont(fontPath, 180) 
 local inspect= require('inspect')
-local pointer = require('pointer')
+-- local pointer = require('pointer')
 
 
 
@@ -12,7 +12,7 @@ function love.load()
     otf.font= fontPath
     Char = otf.getUnicode("虚")
     Res =utf8.char(Char)
-    pointer.get_data('working')
+    -- pointer.get_data('working')
     
  
 end

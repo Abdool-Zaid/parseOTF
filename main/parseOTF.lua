@@ -8,6 +8,11 @@ function res.getUnicode(char)
   Rasterizer = love.font.newRasterizer( res.font )
   local ch= char
     local glyphdata = love.font.newGlyphData( Rasterizer, ch )
+    function love.keypressed(key, scancode, isrepeat)
+      if key == "space" then
+         print(glyphdata)
+      end
+   end
   Gcode =glyphdata:getGlyph()
     return Gcode
 end
