@@ -1,6 +1,6 @@
 local res = {}
 
-res.font ='mlem'
+res.font ='assets/NotoSerifJP-Black.otf'
 res.test= "working"
 
 
@@ -8,11 +8,7 @@ function res.getUnicode(char)
   Rasterizer = love.font.newRasterizer( res.font )
   local ch= char
     local glyphdata = love.font.newGlyphData( Rasterizer, ch )
-    function love.keypressed(key, scancode, isrepeat)
-      if key == "space" then
-         print(glyphdata)
-      end
-   end
+    
   Gcode =glyphdata:getGlyph()
     return Gcode
 end
@@ -26,5 +22,7 @@ end
     return gldt
  end
 
+
+ 
  
 return res

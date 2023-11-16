@@ -1,20 +1,15 @@
 local otf= require("parseOTF")
 local fontPath = "assets/NotoSerifJP-Black.otf"
 local utf8 = require("utf8")
-local font = love.graphics.newFont(fontPath, 180) 
-local inspect= require('inspect')
--- local pointer = require('pointer')
-
+local font = love.graphics.newFont(fontPath, 180)
+local matc= require("char_to_vec")
+local char ="働"
 
 
 function love.load()
     love.graphics.setFont(font)
-    otf.font= fontPath
-    Char = otf.getUnicode("虚")
-    Res =utf8.char(Char)
-    -- pointer.get_data('working')
-    
- 
+    matc.get_vec(char)
+       
 end
 
 function love.update(dt)
@@ -23,6 +18,7 @@ end
 
 
 function love.draw()
-    love.graphics.print(Res,300,300)
+    -- love.graphics.print(char,300,300)
+  matc.render()
    
 end
